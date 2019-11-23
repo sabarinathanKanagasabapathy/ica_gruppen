@@ -25,11 +25,8 @@ After analysing the data, decided to choose following platform.
 4.2 icaConfig.scala for:
 
   - Loading barometer/temperature data into Spark from local directory.
-
-  - Align the different format of file into common temporary view
-  
+  - Align the different format of file into common temporary view  
   - Load the temporary view into final table
-
   - Print the counts to ensure the data is loaded successfuly without any data drop
 
 4.3 icaMain.scala is the Main class which will invoke above trait and process the input files
@@ -56,40 +53,22 @@ target/weather_monitoring.jar
 
 Recon counts will print at end of the job run to ensure the data is loaded in all stages
 
-**Test case 1** : select count(*) from ica_barometer_output
-              select count (*) from ica_temperature_output
-              Vs
-              Number of count in the file
-Expected result : Count should match
-Actual result  :  Count matched
+**Test case ** :
 
-***Individual File count :***
+-Query :
+  - select count(*) from ica_barometer_output
+  - select count (*) from ica_temperature_output
+-File count : Number of count in the file
+-Expected result : Count should match
+-Actual result  :  Count matched
 
-***Barometer :***
+-Individual File count
+ - Barometer   : 97520
+ - Temperature : 97520
 
-|stockholm_baromet...|37620|
-|stockholm_baromet...| 1096|
-|stockholm_baromet...|27758|
-|stockholm_baromet...| 8401|
-|stockholm_baromet...|18993|
-|stockholm_baromet...| 1826|
-|stockholma_barome...| 1826|
-
-***Temperature :***
-
-|stockholm_daily_t...|37620|
-|stockholm_daily_t...|37255|
-|stockholm_daily_t...|18993|
-|stockholm_daily_t...| 1826|
-|stockholma_daily_...| 1826|
-
-***Final Table count :***
---------------------+-----+
-|          TABLE_NAME|COUNT|
-+--------------------+-----+
-|ica_barometer_output|97520|
-|ica_temperature_o...|97520|
-+--------------------+-----+
+-Final Table count :
+ - ica_barometer_output   - 97520
+ - ica_temperature_output - 97520
 
 **Submit job to Spark on YARN :**
 
