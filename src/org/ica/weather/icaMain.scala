@@ -4,6 +4,13 @@ import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.SQLContext
 import java.io._
 
+/**
+ * @author sabari
+ * @written 23 Nov, 2019
+ * @description
+ * 		Object is driving program of the application.
+ */
+
 object icaMain extends fileConfig with Context{
   
   

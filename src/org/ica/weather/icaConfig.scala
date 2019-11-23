@@ -10,10 +10,16 @@ import org.apache.spark.sql.types.{StructType, StructField, StringType}
 import org.apache.spark.sql.SparkSession
 
 
+/**
+ * @author sabari
+ * @written 23 Nov, 2019
+ * @description
+ * 		trait to preprocess the barometer and temperature data and loading to target table of the application.
+ */
+
 trait fileConfig extends Context{
   
-
-  
+ 
    /** Listing of the files
   *
   *  Read the files from the source folder
@@ -30,7 +36,7 @@ trait fileConfig extends Context{
   
   /** Drop the Existing table.
   *
-  * Recreating the table
+  * Existing will be dropped it will recreate as part of the loading
   * 
   */
   
@@ -38,11 +44,12 @@ trait fileConfig extends Context{
     sparkSession.sql(s""" DROP TABLE IF EXISTS ${tableName} """.stripMargin)    
   }
   
-  /** Barometer data loading to target table.
-  *
-  * Raw files will read and load into temporary view and finally it will append to target table
-  * 
-  */
+  
+   /*
+   * Function to download weather data for the given input path and align the template into common format 
+   * eg: 2013 Dec 2018 barometer measurements on air pressure  
+   * 
+   */
   
   def barometer_loading (path : String, fileName : String, targetTable : String ) : Unit = {
     
@@ -106,12 +113,12 @@ trait fileConfig extends Context{
        println ( " Table Name : " + targetTable + "  Count : "+ targetDF.count())
   }
   
-   /** Temperature data loading to target table.
-  *
-  * Raw files will read and load into temporary view and finally it will append to target table
-  * 
-  */
-  
+   /*
+   * Function to download weather data for the given input path and align the template into common format 
+   * eg: 2013 Dec 2018 temperature measurements on min, max, mean degree  
+   * 
+   */
+   
   def temperature_loading (path : String, fileName : String, targetTable : String ) : Unit = {
     
      var file_name=path +"\\"+fileName
@@ -157,7 +164,7 @@ trait fileConfig extends Context{
   
   /** Recon of data.
   *
-  * This is verify the target and source table details.
+  * This is verify the target and source table count details.
   * 
   */
   

@@ -2,6 +2,12 @@ package  org.ica.weather
 import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.sql.SparkSession
 
+/**
+ * @author sabari
+ * @written 23 Nov, 2019
+ * @description
+ * 		trait to hold config file of the application.
+ */
 
 trait Context {
 
