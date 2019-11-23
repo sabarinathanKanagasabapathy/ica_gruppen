@@ -1,11 +1,12 @@
 # ica_gruppen
 
 Assumption :
+
 1) Input file will have space delimitted file
 2) Currently code configured to run locally need to change it to yarn
 3) Currently input and output path is hard coded and required to parameterize by passing argument
 
-Compile
+Compile :
 
 Assuming you already have Eclipse Scala IDE with spark Jar installed:
 
@@ -16,7 +17,7 @@ $ Build the jar
 
 target/ica_gruppen.jar
 
-Unit Test
+Unit Test :
 
 Recon counts will print at end of the job run to ensure the data is loaded in all stages
 
