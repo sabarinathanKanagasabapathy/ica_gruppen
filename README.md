@@ -53,20 +53,20 @@ target/weather_monitoring.jar
 
 Recon counts will print at end of the job run to ensure the data is loaded in all stages
 
-**Test case ** :
+**Test case :**
 
--Query :
+1.Query :
   - select count(*) from ica_barometer_output
   - select count (*) from ica_temperature_output
 -File count : Number of count in the file
 -Expected result : Count should match
 -Actual result  :  Count matched
 
--Individual File count
+2.Individual File count
  - Barometer   : 97520
  - Temperature : 97520
 
--Final Table count :
+3.Final Table count :
  - ica_barometer_output   - 97520
  - ica_temperature_output - 97520
 
