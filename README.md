@@ -59,15 +59,15 @@ Recon counts will print at end of the job run to ensure the data is loaded in al
 **Unit Test case :**
 
 1. Valid details Temperature
-   -scala -cp scalatest-3.0.8.jar:junit-4.4.jar org.ica.test WeatherTest  <Valid input path> <Valid File name> "Temperature"
+   - scala -cp scalatest-3.0.8.jar:junit-4.4.jar org.ica.test WeatherTest  <Valid input path> <Valid File name> "Temperature"
 2. Valid details Barometer
-   -scala -cp scalatest-3.0.8.jar:junit-4.4.jar org.ica.test WeatherTest  <Valid input path> <Valid File name> "Barometer"
+   - scala -cp scalatest-3.0.8.jar:junit-4.4.jar org.ica.test WeatherTest  <Valid input path> <Valid File name> "Barometer"
 3. Invalid details Temperature
-   -scala -cp scalatest-3.0.8.jar:junit-4.4.jar org.ica.test WeatherTest  <Invalid input path> <Valid File name> "Temperature"
-   -scala -cp scalatest-3.0.8.jar:junit-4.4.jar org.ica.test WeatherTest  <Valid input path> <Invalid File name> "Temperature"
+   - scala -cp scalatest-3.0.8.jar:junit-4.4.jar org.ica.test WeatherTest  <Invalid input path> <Valid File name> "Temperature"
+   - scala -cp scalatest-3.0.8.jar:junit-4.4.jar org.ica.test WeatherTest  <Valid input path> <Invalid File name> "Temperature"
 4. Invalid details Barometer
-   -scala -cp scalatest-3.0.8.jar:junit-4.4.jar org.ica.test WeatherTest  <Invalid input path> <Valid File name> "Barometer"
-   -scala -cp scalatest-3.0.8.jar:junit-4.4.jar org.ica.test WeatherTest  <Valid input path> <Invalid File name> "Barometer"
+   - scala -cp scalatest-3.0.8.jar:junit-4.4.jar org.ica.test WeatherTest  <Invalid input path> <Valid File name> "Barometer"
+   - scala -cp scalatest-3.0.8.jar:junit-4.4.jar org.ica.test WeatherTest  <Valid input path> <Invalid File name> "Barometer"
 
 **Recon Test case :**
 
