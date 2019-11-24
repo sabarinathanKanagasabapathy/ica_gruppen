@@ -6,15 +6,15 @@ Procured input data from stockholm case studies as a raw text file.
 
 After analysing the data, decided to choose following platform.
 
-3.1 Apache Spark 1.4.1, Spark SQL 1.4.1
+3.1 Apache Spark 2.2.0
 
-3.2 Scala 2.10.4
+3.2 Scala 2.13.21
 
-3.3 java version "1.8.0_77"
+3.3 java version "1.8.0_23"
 
 3.5 Apache Hadoop: Hadoop 2.5.0-cdh5.3.0
 
-3.6 SBT: 0.13.5
+3.6 SBT: 1.3.4
 
 3.6 Hadoop Distribution: Cloudera/Horton Works
 
