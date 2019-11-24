@@ -1,8 +1,12 @@
 **Weather Monitoring - Sabari Nathan**
 
-The project is trying to do in "big data processing" fashion for the stockholm temperature/barometer data
+The project is trying to load the data from weather forecast station to spark tables and make the data availablity for data scientist for further analytics.
 
-Procured input data from stockholm case studies as a raw text file. 
+Raw data will be taken from Stockholm Historical Weather observation. The data is in the form of below
+-Barometer readings in original units 
+-Raw individual temperature observations
+
+Either Barometer or temperature observation is having both automated and manual observations. Hence we need to ensure the target table should be both the layout.
 
 After analysing the data, decided to choose following platform.
 
