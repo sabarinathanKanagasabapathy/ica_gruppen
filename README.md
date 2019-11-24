@@ -44,11 +44,12 @@ After analysing the data, decided to choose following platform.
 
 **Compile :**
 
-Assuming you already have **Eclipse Scala IDE with sbt, spark Jar installed**:
+Assuming you already have **Eclipse Scala IDE with sbt **  or **IntellJ with SBT installed** . Spark jars need to add in lib folder/class path.
 
 1. Create the project with WEATHER_MONITORING in the the eclipse 
 2. git clone https://github.com/sabarinathanKanagasabapathy/weather_monitoring.git to local project folder
 3. Import the package into project
+4. Place the build.sbt file for intell j
 4. Build the jar - target/weather_monitoring.jar
 
 **Unit Test :**
