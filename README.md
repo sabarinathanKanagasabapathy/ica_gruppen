@@ -3,39 +3,39 @@
 The project is trying to load the data from weather forecast station to spark tables and make the data availablity for data scientist for further analytics.
 
 Raw data will be taken from Stockholm Historical Weather observation. The data is in the form of below
--Barometer readings in original units 
--Raw individual temperature observations
+1.Barometer readings in original units 
+2.Raw individual temperature observations
 
-Either Barometer or temperature observation is having both automated and manual observations. Hence we need to ensure the target table should be both the layout.
+Both Barometer readings and temperature observation is having automated and manual observations. The spark will preporcess the different layout of data and load into common table for data scientist.
+
+**Target Tabe :**
+1.ica_barometer_output
+2.ica_temperature_output
 
 After analysing the data, decided to choose following platform.
 
-3.1 Apache Spark 2.2.0
-
-3.2 Scala 2.13.21
-
-3.3 java version "1.8.0_23"
-
-3.5 Apache Hadoop: Hadoop 2.5.0-cdh5.3.0
-
-3.6 SBT: 1.3.4
-
-3.6 Hadoop Distribution: Cloudera/Horton Works
+1 Apache Spark 2.2.0
+2 Scala 2.13.21
+3 java version "1.8.0_23"
+5 Apache Hadoop: Hadoop 2.5.0-cdh5.3.0
+6 SBT: 1.3.4
+7.Hadoop Distribution: Cloudera/Horton Works
 
 **Project Artifacts:**
 
-4.1 icaContext.scala to intialize the spark session
-
-4.2 icaConfig.scala for:
-
-  - Loading barometer/temperature data into Spark from local directory.
+1 WeatherConfig.scala to intialize the spark session and it is having common function for this project
+2 BarometerTableLoad.scala for:
+  - Loading barometer data into Spark from local directory.
   - Align the different format of file into common temporary view  
-  - Load the temporary view into final table
-  - Print the counts to ensure the data is loaded successfuly without any data drop
-
-4.3 icaMain.scala is the Main class which will invoke above trait and process the input files
+  - Load the temporary view into final table 
+3 TemperatureTableLoad.scala for:
+  - Loading temperature data into Spark from local directory.
+  - Align the different format of file into common temporary view  
+  - Load the temporary view into final table  
+4 PredictWeatherMain.scala is the Main class which will invoke above trait and process the input files
   - it takes input path and output path as an argument
   - it takes target output tables as an argument
+  - Print the counts to ensure the data is loaded successfuly without any data drop
 
 **Assumption :**
 
